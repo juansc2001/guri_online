@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", "False").lower() == "True" 
+DEBUG = os.environ.get("DEBUG", "False").lower == "True" 
 
 ALLOWED_HOSTS = ["guri-online.onrender.com"]
 #isso funcionou
@@ -43,7 +43,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',#linha adicionada
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -122,12 +121,16 @@ STATIC_URL = 'static/'
 
 #acrescentado
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 #acrescentado
 
+<<<<<<< HEAD
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static',   #REcoloquei
+=======
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+>>>>>>> parent of f93227b (whitenoise adcionado)
 ]
 
 # Default primary key field type
