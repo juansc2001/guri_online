@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content%}
+  <main>
+    <h3 class="suites">Suítes para todos os gostos</h3>
+    <div class="container-cards">
+      <div class="card">
+        <h2>Suíte Afrodit</h2>
+        <img class="img-suites" src="{% static 'img/afrodit.jpeg' %}" alt="" style=border-radius:20px;>
+        <a href="{% url 'afrodite'%}"><button>VISITE A SUÍTE</button></a>
+      </div>
+      <div class="card">
+        <h2>Suíte Intense</h2>
+        <img class="img-suites" src="{% static 'img/intense.jpg' %}" alt="" style=border-radius:20px;>
+        <a href="{% url 'intence'%}"><button>VISITE A SUÍTE</button></a>
+      </div>
+      <div class="card">
+        <h2>Suíte Eros</h2>
+        <img class="img-suites" src="{% static 'img/eros.jpeg' %}" alt="" style=border-radius:20px;>
+        <a href="{% url 'eros' %}"><button>VISITE A SUÍTE</button></a>
+      </div>
+      <div class="card">
+        <h2>Suíte Iris</h2>
+        <img class="img-suites" src="{% static 'img/iris.jpeg' %}" alt="" style=border-radius:20px;>
+        <a href="{% url 'iris' %}"><button>VISITE A SUÍTE</button></a>
+      </div>
+      <div class="card">
+        <h2>Suíte Lumini</h2>
+        <img class="img-suites" src="{% static 'img/lumini.jpeg' %}" alt="" style=border-radius:20px;>
+        <a href="{% url 'lumini' %}"><button>VISITE A SUÍTE</button></a>
+      </div>
+      <div class="card">
+        <h2>Suíte Luzes</h2>
+        <img class="img-suites" src="{% static 'img/luzes.png' %}" alt="" style=border-radius:20px;>
+        <a href="{% url 'luzes' %}"><button>VISITE A SUÍTE</button></a>
+      </div>
+      <div class="card">
+        <h2>Suíte Magic</h2>
+        <img class="img-suites" src="{% static 'img/magic.png' %}" alt="" style=border-radius:20px;>
+        <a href="{% url 'magic'%}"><button>VISITE A SUÍTE</button></a>
+      </div>
+      <div class="card">
+        <h2>Suíte Sensação</h2>
+        <img class="img-suites" src="{% static 'img/sensacao.jpg' %}" alt="" Visite a suítetyle=border-radius:20px;>
+        <a href="{% url 'sensacao' %}"><button>VISITE A SUÍTE</button></a>
+      </div>
+      <div class="card">
+        <h2>Suíte Vibes</h2>
+        <img class="img-suites" src="{% static 'img/vibes.jpeg' %}" alt="" style=border-radius:20px;>
+        <a href="{% url 'vibes' %}"><button>VISITE A SUÍTE</button></a>
+      </div>
+    </div>
+  </main>
+
+{% endblock %}

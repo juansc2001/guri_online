@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+
+{% block content %}
+<body class="table">
+    <table>
+      <tr>
+        <th>nome</th>
+        <th>data</th>
+        <th>hora</th>
+      </tr>
+      {% for cliente in cliente %}
+        <tr>
+          <th>{{ cliente.nome }}</th>
+          <td>{{ cliente.data }}</td>
+          <td>{{ cliente.horario }}</td>
+        </tr>
+      {% endfor %}
+  </table>
+  
+</body>
+{% endblock %}
