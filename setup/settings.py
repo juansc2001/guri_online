@@ -123,14 +123,12 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #acrescentado
 
-<<<<<<< HEAD
+
+
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',   #REcoloquei
-=======
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
->>>>>>> parent of f93227b (whitenoise adcionado)
+    BASE_DIR / 'static'
+
 ]
 
 # Default primary key field type
