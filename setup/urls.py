@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from moteldosguri.views import home, pag_afrodite,pag_eros,pag_intence, cadastro, pag_iris, pag_lumini, pag_luzes, pag_magic, pag_sensacao, pag_vibes, pag_contatos, pag_cardapio, check, intro
+
+
+
 urlpatterns = [
     path('intro', intro),
     path('admin/', admin.site.urls),
@@ -35,5 +38,5 @@ urlpatterns = [
     path('cadastro/', cadastro, name='cadastro'),
     path('contatos/', pag_contatos, name='contatos'),
     path('cardapio/', pag_cardapio, name='cardapio'),
-    path('check/', check, name='check')
+    path('check/', check, name='check') 
 ]
