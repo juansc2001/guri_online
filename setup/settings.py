@@ -142,9 +142,15 @@ STATICFILES_DIRS = [BASE_DIR / "static"]  # Se você tiver uma pasta 'static' no
 
 STATIC_ROOT = BASE_DIR / "staticfiles"  # Onde o Whitenoise vai coletar os arquivos
 
-if not os.getenv("DJANGO_DEBUG", "").lower() in ["true", "1"]:
-    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+MEDIA_ROOT = (
+  os.path.join(BASE_DIR, '/static/') #pasta media para abrigar os arquivos dos usuários
+)
 
+MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_URL = "/media/"
+
+if not DEBUG:
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

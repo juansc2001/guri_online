@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from moteldosguri.views import home, pag_afrodite,pag_eros,pag_intence, cadastro, pag_iris, pag_lumini, pag_luzes, pag_magic, pag_sensacao, pag_vibes, pag_contatos, pag_cardapio, check, intro
+from setup.settings import BASE_DIR
+
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 
@@ -40,3 +44,6 @@ urlpatterns = [
     path('cardapio/', pag_cardapio, name='cardapio'),
     path('check/', check, name='check') 
 ]
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / "static"]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
