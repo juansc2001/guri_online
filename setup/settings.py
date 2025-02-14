@@ -142,7 +142,8 @@ STATICFILES_DIRS = [BASE_DIR / "static"]  # Se você tiver uma pasta 'static' no
 
 STATIC_ROOT = BASE_DIR / "staticfiles"  # Onde o Whitenoise vai coletar os arquivos
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+if not os.getenv("DJANGO_DEBUG", "").lower() in ["true", "1"]:
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 # Default primary key field type
